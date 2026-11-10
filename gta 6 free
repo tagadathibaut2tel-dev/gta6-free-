@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI - Téléchargement gratuit</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ background:#f4f6f7;
+ color:#252525;
+ font-family:Arial,sans-serif;
+}
+header{
+ background:white;
+ border-bottom:1px solid #ddd;
+ padding:17px;
+}
+.logo{
+ max-width:1000px;
+ margin:auto;
+ color:#20aa40;
+ font-size:25px;
+ font-weight:bold;
+}
+.logo span{color:#333}
+main{
+ max-width:1000px;
+ margin:25px auto;
+ padding:0 15px;
+}
+.layout{
+ display:grid;
+ grid-template-columns:1fr 290px;
+ gap:20px;
+}
+.card{
+ background:white;
+ border:1px solid #ddd;
+ border-radius:6px;
+ margin-bottom:18px;
+ overflow:hidden;
+}
+.content{padding:22px}
+h1{font-size:25px}
+h2{font-size:19px}
+.muted{color:#777;font-size:13px;line-height:1.5}
+.game{
+ display:flex;
+ align-items:center;
+ gap:18px;
+}
+.icon{
+ width:90px;
+ height:90px;
+ border-radius:15px;
+ background:linear-gradient(135deg,#ec559d,#252653);
+ display:grid;
+ place-items:center;
+ color:white;
+ font-size:35px;
+ font-weight:bold;
+}
+.green{
+ width:100%;
+ padding:15px;
+ border:0;
+ border-radius:4px;
+ background:linear-gradient(#39cf4d,#11972e);
+ color:white;
+ font-size:16px;
+ font-weight:bold;
+ cursor:pointer;
+ box-shadow:0 2px 0 #087c23;
+}
+.green:hover{filter:brightness(1.08)}
+.section{
+ border-top:1px solid #eee;
+ padding:20px;
+}
+.ad{
+ display:block;
+ width:100%;
+ margin:14px 0;
+ padding:20px 8px;
+ border:2px solid #087e16;
+ border-radius:7px;
+ background:linear-gradient(#52e900,#12a900);
+ color:white;
+ font-size:clamp(18px,3vw,29px);
+ font-weight:bold;
+ text-align:center;
+ text-shadow:2px 2px 3px #222;
+ box-shadow:inset 0 0 12px #ffffff88,0 2px 5px #999;
+ cursor:pointer;
+}
+.ad.round{
+ border-radius:45px;
+ background:linear-gradient(#56ed00,#16a500);
+}
+.ad small{
+ display:block;
+ font-size:11px;
+ text-shadow:none;
+ margin-top:5px;
+}
+.adlabel{
+ color:#999;
+ font-size:10px;
+ letter-spacing:1px;
+}
+.side{padding:15px}
+.page{display:none}
+.page.active{display:block}
+.note{
+ padding:12px;
+ margin:15px 0;
+ background:#effbef;
+ border-left:4px solid #20aa40;
+ color:#386b3d;
+ font-size:13px;
+ line-height:1.5;
+}
+.file{
+ display:flex;
+ align-items:center;
+ gap:12px;
+ padding:15px 0;
+ border-bottom:1px solid #eee;
+}
+.fileicon{font-size:30px}
+.fileinfo{flex:1}
+.fileinfo small{
+ display:block;
+ color:#777;
+ margin-top:5px;
+}
+.file button{
+ border:1px solid #20aa40;
+ color:#159634;
+ background:white;
+ padding:10px;
+ border-radius:4px;
+ cursor:pointer;
+}
+.steps{
+ display:flex;
+ gap:5px;
+ margin-bottom:15px;
+}
+.steps span{
+ flex:1;
+ height:4px;
+ background:#ddd;
+}
+.steps span.on{background:#20aa40}
+.overlay{
+ display:none;
+ position:fixed;
+ inset:0;
+ background:#0009;
+ z-index:10;
+ align-items:center;
+ justify-content:center;
+ padding:15px;
+}
+.overlay.show{display:flex}
+.popup{
+ background:white;
+ width:100%;
+ max-width:430px;
+ border-radius:7px;
+ overflow:hidden;
+ box-shadow:0 10px 40px #0007;
+ animation:appear .2s;
+}
+@keyframes appear{
+ from{transform:scale(.9);opacity:0}
+ to{transform:scale(1);opacity:1}
+}
+.pophead{
+ padding:15px;
+ border-bottom:1px solid #ddd;
+ font-weight:bold;
+}
+.close{
+ float:right;
+ border:0;
+ background:none;
+ font-size:22px;
+ cursor:pointer;
+}
+.popbody{padding:20px}
+.choice{
+ border:1px solid #ddd;
+ padding:13px;
+ margin:10px 0;
+ border-radius:4px;
+ font-size:13px;
+}
+.choice b{float:right;color:#20aa40}
+footer{
+ text-align:center;
+ color:#999;
+ font-size:11px;
+ padding:25px;
+}
+@media(max-width:750px){
+ .layout{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="logo">APK<span>ZONE</span></div>
+</header>
+
+<main>
+
+<div class="steps">
+ <span class="on" id="s1"></span>
+ <span id="s2"></span>
+ <span id="s3"></span>
+ <span id="s4"></span>
+</div>
+
+<div class="layout">
+
+<div>
+
+<!-- PAGE 1 -->
+<section class="card page active" id="p1">
+ <div class="content">
+  <div class="game">
+   <div class="icon">VI</div>
+   <div>
+    <h1>Grand Theft Auto VI</h1>
+    <div class="muted">Rockstar Games · Action</div>
+    <div style="color:#f3a323;margin-top:8px">
+     ★★★★★ <span class="muted">4,9 · 28 451 avis</span>
+    </div>
+   </div>
+  </div>
+
+  <div class="section">
+   <p class="muted">Version : 1.0.0<br>
+   Taille annoncée : 124,8 Go<br>
+   Prix : Gratuit</p>
+
+   <button class="green" onclick="go(2)">
+    ⬇ TÉLÉCHARGER
+   </button>
+  </div>
+
+  <h2>À propos du jeu</h2>
+  <p class="muted">
+   Découvrez Vice City dans le nouvel épisode
+   de la célèbre série Grand Theft Auto.
+   Téléchargez gratuitement dès maintenant !
+  </p>
+ </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="card page" id="p2">
+ <div class="content">
+  <h2>Choisissez votre téléchargement</h2>
+  <p class="muted">
+   Plusieurs serveurs sont disponibles.
+   Choisissez celui qui vous convient.
+  </p>
+
+  <button class="green" onclick="popup('serveur')">
+   ⬇ TÉLÉCHARGEMENT DIRECT
+  </button>
+
+  <button class="green" style="margin-top:15px"
+   onclick="popup('serveur')">
+   ⬇ AUTRE SERVEUR
+  </button>
+
+  <div class="note">
+   Votre téléchargement est presque prêt.
+   Vérification du serveur terminée.
+  </div>
+
+  <h2>Publicités partenaires</h2>
+
+  <div class="adlabel">PUBLICITÉ</div>
+  <button class="ad" onclick="popup('pub')">
+   ⬇ DOWNLOAD NOW
+   <small>CLIQUEZ ICI POUR TÉLÉCHARGER</small>
+  </button>
+
+  <div class="adlabel">PUBLICITÉ</div>
+  <button class="ad round" onclick="popup('pub')">
+   ⬇ DOWNLOAD
+  </button>
+
+  <button class="green" onclick="go(3)">
+   CONTINUER →
+  </button>
+ </div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="card page" id="p3">
+ <div class="content">
+  <h2>Préparation du téléchargement</h2>
+
+  <p class="muted">
+   Votre fichier est en cours de préparation...
+  </p>
+
+  <div style="height:12px;background:#ddd;border-radius:10px">
+   <div style="height:12px;width:100%;background:#20aa40;border-radius:10px"></div>
+  </div>
+
+  <p style="color:#20aa40;font-weight:bold">
+   100 % terminé
+  </p>
+
+  <div class="adlabel">PUBLICITÉ</div>
+  <button class="ad round" onclick="popup('pub')">
+   ⬇ FREE DOWNLOAD
+   <small>TÉLÉCHARGEMENT GRATUIT</small>
+  </button>
+
+  <div class="note">
+   Votre téléchargement est prêt.
+   Cliquez sur le bouton ci-dessous.
+  </div>
+
+  <button class="green" onclick="go(4)">
+   AFFICHER MES FICHIERS →
+  </button>
+ </div>
+</section>
+
+
+<!-- PAGE 4 : TÉLÉCHARGEMENT FINAL -->
+<section class="card page" id="p4">
+ <div class="content">
+  <h2>Votre téléchargement est prêt !</h2>
+
+  <p class="muted">
+   Grand Theft Auto VI — Version 1.0.0
+  </p>
+
+  <div style="text-align:center;padding:25px 10px">
+   <div style="font-size:55px">🎮</div>
+   <h2>GTA VI</h2>
+   <p class="muted">
+    Tous les fichiers sont prêts.
+    Cliquez ci-dessous pour lancer le téléchargement.
+   </p>
+
+   <button class="green" onclick="downloadAll()">
+    ⬇ TÉLÉCHARGER MAINTENANT
+   </button>
+  </div>
+
+  <div class="note">
+   Vérification terminée · Téléchargement disponible.
+  </div>
+ </div>
+</section>
+
+
+</div>
+
+<!-- COLONNE PUBLICITAIRE -->
+<aside>
+ <div class="card side">
+  <div class="adlabel">PUBLICITÉ</div>
+  <button class="ad" onclick="popup('pub')">
+   ⬇ DOWNLOAD NOW
+  </button>
+ </div>
+
+ <div class="card side">
+  <h3>Informations</h3>
+  <p class="muted">
+   Version : 1.0.0<br>
+   Catégorie : Action<br>
+   Plateforme : PC
+  </p>
+ </div>
+
+ <div class="card side">
+  <div class="adlabel">PUBLICITÉ</div>
+  <button class="ad round" onclick="popup('pub')">
+   ⬇ FREE DOWNLOAD
+  </button>
+ </div>
+</aside>
+
+</div>
+
+</main>
+
+<footer>
+ APKZONE · Site parodique · Aucun véritable jeu fourni
+</footer>
+
+<!-- POPUP -->
+<div class="overlay" id="overlay">
+ <div class="popup">
+  <div class="pophead">
+   <span id="popTitle">Téléchargement</span>
+   <button class="close" onclick="closePopup()">×</button>
+  </div>
+
+  <div class="popbody" id="popBody"></div>
+ </div>
+</div>
+
+<script>
+
+function go(n){
+ for(let i=1;i<=4;i++){
+  document.getElementById('p'+i)
+   .classList.toggle('active',i===n);
+
+  document.getElementById('s'+i)
+   .classList.toggle('on',i<=n);
+ }
+ window.scrollTo(0,0);
+}
+
+function popup(type){
+
+ const title=document.getElementById('popTitle');
+ const body=document.getElementById('popBody');
+
+ if(type==='pub'){
+  title.textContent='Téléchargement sponsorisé';
+
+  body.innerHTML=`
+   <h3>🎉 Offre spéciale !</h3>
+   <p class="muted">
+    Vous avez trouvé un téléchargement partenaire !
+    Enfin... presque.
+   </p>
+
+   <div class="choice">
+    ⬇ Téléchargement ultra rapide
+    <b>PUBLICITÉ</b>
+   </div>
+
+   <p class="muted">
+    Ceci est une fausse publicité pour la blague.
+   </p>
+
+   <button class="green" onclick="closePopup()">
+    RETOUR AU SITE
+   </button>
+  `;
+ }else{
+  title.textContent='Sélection du serveur';
+
+  body.innerHTML=`
+   <h3>Votre fichier est presque prêt</h3>
+   <p class="muted">
+    Choisissez votre serveur de téléchargement.
+   </p>
+
+   <div class="choice">
+    🌐 Serveur Vice City
+    <b>EN LIGNE</b>
+   </div>
+
+   <div class="choice">
+    ⚡ Serveur ultra rapide
+    <b>EN LIGNE</b>
+   </div>
+
+   <button class="green" onclick="closePopup();go(3)">
+    LANCER LE TÉLÉCHARGEMENT
+   </button>
+  `;
+ }
+
+ document.getElementById('overlay')
+  .classList.add('show');
+}
+
+function closePopup(){
+ document.getElementById('overlay')
+  .classList.remove('show');
+}
+
+document.getElementById('overlay')
+ .addEventListener('click',function(e){
+  if(e.target===this)closePopup();
+ });
+
+document.addEventListener('keydown',function(e){
+ if(e.key==='Escape')closePopup();
+});
+
+function downloadText(filename,content){
+
+ const blob=new Blob([content],{
+  type:'text/plain;charset=utf-8'
+ });
+
+ const url=URL.createObjectURL(blob);
+ const a=document.createElement('a');
+
+ a.href=url;
+ a.download=filename;
+
+ document.body.appendChild(a);
+ a.click();
+ a.remove();
+
+ setTimeout(function(){
+  URL.revokeObjectURL(url);
+ },1500);
+}
+
+
+function downloadAll(){
+
+ downloadText(
+  'GTA6.exe.txt',
+  'INSTALLATION GTA VI\n\nÉCHEC DU TÉLÉCHARGEMENT !\n\nErreur 404 : devoir d’allemand détecté.\nRévise plutôt ton vocabulaire !'
+ );
+
+ setTimeout(function(){
+  downloadText(
+   'virus.exe.txt',
+   'VIRUS.EXE\n\nSURPRISE !\nCeci est un simple fichier texte.\nAucun virus, aucun danger.\n\nTU T’ES FAIT TROLLER ! 😂\nHerzlichen Glückwunsch!'
+  );
+ },1000);
+}
+
+
+</script>
+</body>
+</html>
+
